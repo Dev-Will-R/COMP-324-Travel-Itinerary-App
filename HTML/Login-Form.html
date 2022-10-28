@@ -4,14 +4,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="Login-Form-Stylesheet.css" />
+    <link rel="stylesheet" href="../CSS/Login-Form-Stylesheet.css" type="text/css" />
     <title>Travel Itinerary</title>
 </head>
 
 <body>
 
-    <button>Login</button>
-    <button>Sign Up</button>
+    <button class="login-button1">Login</button>
+    <button class="sign-up-button">Sign Up</button>
 
     <div class="container" id="container">
         
@@ -24,14 +24,14 @@
         <div class="form-container log-in-container">
             <form action="#">
                 
-                <input type="username" placeholder="Username" />
-                <input type="password" placeholder="Password" />
+                <input type="username" class="username" placeholder="Username" />
+                <input type="password" class="password" placeholder="Password" />
                 <br>
                 <label for="remember">Remember me?</label>
-                <input type="checkbox" id="remember" name="remember" value="Remember">
-                <p>Forgot your Username and/or<br> Password? <a href="#"><u>Click Here.</u></a></p>
+                <input type="checkbox" class="remember" name="remember" value="Remember">
+                <p class="forgotten-password">Forgot your Username and/or<br> Password? <a href="#" style="color: white"><u>Click Here.</u></a></p>
 
-                <button>Login</button>
+                <button class="login-button2">Login</button>
             </form>
         </div>
 

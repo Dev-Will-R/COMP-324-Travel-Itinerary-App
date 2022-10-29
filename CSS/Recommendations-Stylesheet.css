@@ -1,0 +1,138 @@
+@font-face {
+    font-family: ABeeZee;
+    src: url("../Images-Fonts/ABeeZee-Regular.ttf");
+}
+
+body {
+    font-family: ABeeZee;
+    background-image: url("../Images-Fonts/Login-Form-Background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+form {
+	background-color: #744578;
+    border-radius: 12px;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px 50px;
+    height: 100%;
+	text-align: left;
+}
+
+input {
+    position: absolute;
+	background: none;
+    border: none;
+}
+
+.username {
+    width: 277px;
+    height: 36px;
+    left: 944px;
+    top: 415px;
+    font-size: 20px;
+    font-family: ABeeZee;
+    opacity: 1;
+    border-bottom: 2px solid white;
+}
+
+.password {
+    width: 277px;
+    height: 36px;
+    left: 944px;
+    top: 503px;
+    font-size: 20px;
+    font-family: ABeeZee;
+    opacity: 1;
+    border-bottom: 2px solid white;
+}
+
+
+::placeholder {
+    color:white;
+}
+
+.forgotten-password {
+    position: absolute;
+    width: 297;
+    height: 58px;
+    left: 890px;
+    top: 608px;
+}
+
+.remember {
+    position: absolute;
+    border: 1px solid white;
+    width: 34px;
+    height: 35px;
+    left: 1036px;
+    top: 565px;
+}
+
+.login-button1 {
+    position: absolute;
+	border: none;
+    border-radius: 30px;
+	background-color:#744578;
+	color: #FFFFFF;
+	font-size: 20px;
+	width: 170px;
+    height: 56px;
+    left: 1240px;
+    top: 64px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    margin: 5px;
+}
+
+.sign-up-button {
+    position: absolute;
+	border: none;
+    border-radius: 30px;
+	background-color: #DA5263;
+	color: #FFFFFF;
+	font-size: 20px;
+    width: 170px;
+    height: 56px;
+    left: 1461px;
+    top: 64px;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.login-button2 {
+	border-radius: 12px;
+	border: 2px solid #ffffff;
+	background-color: #744578;
+	color: #FFFFFF;
+	font-size: 20px;
+	padding: 12px 85px;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.form-container {
+    position: absolute;
+    width: 709px;
+    height: 616px;
+    left: 544px;
+    top: 254px;
+    background: #744578;
+    border-radius: 30px;
+}

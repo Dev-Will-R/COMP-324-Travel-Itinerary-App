@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" signuppage.css>
+    <link rel="stylesheet" href="../CSS/SignUpForm.css">
     <title>Sign Up Form</title>
 </head>
 
 <body>
 
-    <button>Login</button>
-    <button>Sign Up</button>
+    <button class="login-btn">Login</button>
+    <button class="sign-up-btn1">Sign Up</button>
 
     <div class="container" id="container">
-        <div class="overlay-panel overlay-left">
+        <div class="overlay-container">
             <h1>Sign Up</h1>
             <h2>Get started in seconds! Plan your next trip with our website.</h2>
-        </div>
-    </div>
+        </div>    
 
-    <div class="sign-up-form container">
-        <form>
-            <input type="name" class="input-box" placeholder="Full Name">
-            <input type="email" class="input-box" placeholder="Email Address">
-            <input type="username" class="input-box" placeholder="Username">
-            <input type="password" class="input-box" placeholder="Password">
-            <input type="confirm_password" class="input-box" placeholder="Confirm Password">
-            <button type="button" class="sign-up-btn">Sign Up</button>
-            <p class="or">OR</p>
-            <button type="button" class="sign-up-btn-facebook">Sign Up with Facebook</button>
-            <button type="button" class="sign-up-btn-google">Sign Up with Google</button>
-        </form>
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <input type="full-name" class="full-name" placeholder="Full Name">
+                <span class='user-icon' id="one"></span>
+                <input type="email-address" class="email-address" placeholder="Email Address">
+                <span class='email-address-icon'></span>
+                <input type="username" class="username" placeholder="Username">
+                <span class='user-icon' id="two"></span>
+                <input type="password" class="password" placeholder="Password">
+                <span class='password-icon' id="three"></span>
+                <input type="confirm-password" class="confirm-password" placeholder="Confirm Password">
+                <span class='password-icon' id="four"></span>
+                <button class="sign-up-btn2">Sign Up</button>
+                <p class="or">OR</p>
+                <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
+                <span class='facebook-icon'></span>
+                <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
+                <span class='google-icon'></span>
+            </form>
+        </div>    
     </div>
-
 </body>
 
 </html>

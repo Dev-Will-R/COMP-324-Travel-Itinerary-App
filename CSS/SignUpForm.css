@@ -1,0 +1,292 @@
+@font-face {
+    font-family: ABeeZee;
+    src: url("../Images-Fonts/ABeeZee-Regular.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../Images-Fonts/signupbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    font-family: ABeeZee;
+    color: #FFFFFF;
+}
+.login-btn {
+    position: absolute;
+    background-color: #744578;
+    width: 170px;
+    height: 56px;
+    border-radius: 30px;
+    left: 1240px;
+    top: 50px;
+    margin: 5px;
+    color: #FFFFFF;
+    font-family: ABeeZee;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.sign-up-btn1 {
+    position: absolute;
+    background-color: #DA5263;
+    width: 170px;
+    height: 56px;
+    border-radius: 30px;
+    left: 1461px;
+    top: 50px;
+    margin: 5px;
+    color: #FFFFFF;
+    font-family: ABeeZee;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    font-size: 60px;
+    position: relative;
+    left: 40px;
+    line-height: 71px;
+    white-space: nowrap;
+    
+}
+
+h2 {
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    font-size: 26px;
+    position: absolute;
+    left: 18px;
+    top: 90px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 50px;
+    text-align: left;
+
+}
+
+input {
+    background: none;
+    border: none;
+}
+
+.sign-up-form {
+    background-color: #DA5263;
+    width: 709px;
+    height: 616px;
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+.full-name {
+    font-size: 20px;
+    font-family: ABeeZee;
+    transform: translate(150px, -40px);
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    left: 130px;
+    top: 42px;
+}
+
+.email-address {
+    font-size: 20px;
+    font-family: ABeeZee;
+    transform: translate(150px, 0px);
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    left: 130px;
+    top: -13px;
+}
+
+.username {
+    font-size: 20px;
+    font-family: ABeeZee;
+    transform: translate(150px, 40px);
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    left: 130px;
+    top: -65px;
+}
+
+.password {
+    font-size: 20px;
+    font-family: ABeeZee;
+    transform: translate(150px, 80x);
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    left: 279px;
+    top: -35px;
+}
+
+.confirm-password {
+    font-size: 20px;
+    font-family: ABeeZee;
+    transform: translate(150px, 120px);
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    left: 130px;
+    top: -160px;
+}
+
+
+.sign-up-btn2 {
+    border-radius: 12px;
+    border: 2px solid #FFFFFF;
+    background-color: #DA5263;
+    color: #FFFFFF;
+    font-size: 18px;
+    position: relative;
+    transform: translate(150px, -20px);
+    padding: 12px 105px;
+    text-transform: uppercase;
+    font-family: ABeeZee;
+    position: relative;
+    top: -45px;
+    left: 125px;
+}
+
+.or {
+    font-size: 24px;
+    font-family: ABeeZee;
+    position: absolute;
+    left: 445px;
+    top: 420px;
+}
+
+.sign-up-btn-facebook {
+    background-color: #1D54A6;
+    color: #FFFFFF;
+    border-radius: 13px;
+    width: 281px;
+    height: 49px;
+    font-family: ABeeZee;
+    font-size: 20px;
+    position: relative;
+    left: 280px;
+    top: -22px;
+}
+
+.sign-up-btn-google {
+    background-color: #B41111;
+    color: #FFFFFF;
+    border-radius: 13px;
+    width: 281px;
+    height: 49px;
+    font-family: ABeeZee;
+    font-size: 20px;
+    position: relative;
+    left: 280px;
+    top: -28px;
+}
+
+.form-container {
+    position: absolute;
+    display: flex;
+    width: 709px;
+    height: 616px;
+    top: 254px;
+    left: 544px;
+    border-radius: 30px;
+    background: #DA5263;
+    z-index: 1;
+}
+
+.overlay-container {
+    position: relative;
+    display: flex;
+    width: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2;
+    font-size: 30px;
+    transform: translate(570px, 450px)
+}
+
+
+.user-icon {
+    background: url('../Images-Fonts/User_fill.png');
+    height: 50px;
+    width: 46px;
+    display: block;
+}
+
+.email-address-icon {
+    background: url('../Images-Fonts/Message_alt_fill.png');
+    height: 50px;
+    width: 44px;
+    display: block;
+    position: relative;
+    left: 155px;
+    top: -37px;
+}
+
+.password-icon {
+    background: url('../Images-Fonts/Lock_fill.png');
+    height: 49px;
+    width: 46px;
+    display: block;
+}
+
+.facebook-icon {
+    background: url('../Images-Fonts/bxl-facebook-circle\ 1.png');
+    height: 27px;
+    width: 27px;
+    display: block;
+    position: relative;
+}
+
+.google-icon {
+    background: url('../Images-Fonts/bxl-google-plus-circle\ 1.png');
+    height: 33px;
+    width: 33px;
+    display: block;
+
+} 
+
+#one {
+    position: relative;
+    left: 150px;
+    top: -25px;
+}
+
+#two {
+    position: relative;
+    left: 150px;
+    top: -55px;
+}
+
+#three {
+    position: relative;
+    left: 150px;
+    top: -65px;
+}
+
+#four {
+    position: relative;
+    left: 150px;
+    top: -70px;
+}
+
+
+

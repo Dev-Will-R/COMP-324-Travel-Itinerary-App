@@ -6,14 +6,42 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../CSS/Recommendations-Stylesheet.css" type="text/css" />
     <title>More Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Google Maps</title>
+        <style>
+            #map{
+                height: 405px;
+                width: 876px;
+            }
+        </style>
 </head>
 
 <body>
     <script src="./server.js"></script>
     <div class="container" id="container">
         <div>IMAGE CAROUSSEL</div>
-        <div>LOCATION DESCRIPTION</div>
-        <div>GOOGLE MAP</div>
+        <div>LOCATION DESCRIPTION
+            src img=Images-Fonts\Grand-Canyon-National-Park.jpg
+        </div>
+        <div>
+            <h1>My Google Map</h1>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var options = {
+                        zoom:11,
+                        center: {lat: 41.8781, lng: 87.6298}
+                    }
+    
+                    var map = new google.maps.Map(document.getElementById('map'), options);
+                }
+            </script>
+            <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBsMq43Rsu_XbI4bepexzypZsQH2KlQTs&libraries=places&callback=initMap">
+        </script>
+    
+        </div>
         <div>BUTTONS
             <button class="">view all</button>
             <button class="">view recs</button>

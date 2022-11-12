@@ -1,0 +1,191 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: calc(100px + 15vw);
+    background-color:black;
+
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar h1{
+    background-color: tomato;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 5px 12px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.menu ul li a:hover{
+    border-bottom: 4px solid #000;
+    transition: 1.8s;
+}
+
+.logo{
+    margin-left: 20px;
+}
+
+.right__col ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.right__col a {
+    text-decoration: none;
+    
+}
+
+
+/* .img__container{
+    position: relative;
+} */
+/* 
+.fa-plus{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+
+} */
+
+.header__wrapper{
+    background: url(travel-world.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.img{
+    border-radius: 50%;
+    width: 20%;
+    margin-top: 20px;
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.left__col{
+    text-align: center;
+    position: relative;
+    /* position: relative;
+    max-width: 205px;
+    margin: 50px auto; */
+}
+
+.user-name{
+    margin: 10px 0px;
+    color: #fff;
+    font-weight:500;
+}
+
+.img__upload{
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+
+
+
+.activity__img{
+   background-position: center;
+   background-size: cover;
+   width: 20%;
+   margin: 20px;
+   border-radius: 10px;
+}
+
+.activity__img--container{
+    display: flex;
+}
+
+.activity__header{
+    margin: 20px 20px 0px 20px;
+    color: #fff;
+}
+
+.img__wrapper{
+    position: relative;
+}
+
+
+input[type="file"] {
+    display: none;
+    cursor: pointer;
+}
+
+.btn{
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+label{
+    cursor: pointer;
+}
+
+.preferences__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-pencil{
+    margin-right: 20px;
+    font-size: 30px;
+}

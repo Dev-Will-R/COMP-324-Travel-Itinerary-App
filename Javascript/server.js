@@ -5,11 +5,12 @@ const port = 3000
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const User = require('../model/user.js')
+//const User = require('../model/user.js')
 const bcrypt = require('bcryptjs')
 const http = require('http')
 const url = require('url')
 const fs = require("fs")
+
 
 const server = http.createServer(function (req, res) {
     const url = req.url;
@@ -22,11 +23,62 @@ const server = http.createServer(function (req, res) {
     }
   })
 
-mongoose.connect('mongodb://localhost:27017/COMP-324-Travel-Itinerary-App', {
+
+
+  const userSchema = mongoose.Schema({
+      fullName: {type: String, required: true, unique: false},
+      emailAddress: {type: String, required: true, unique: true},
+      username: {type: String, required: true, unique: true},
+      password: {type: String},
+      confirmPassword: {type: String}
+  },
+  { collection: 'User_Accounts'} 
+  )
+  
+  const userModel = mongoose.model('UserSchema', userSchema)
+  
+  module.exports = userModel
+
+  //mongodb://localhost:27017/travelitineraryaccounts
+
+mongoose.connect('mongodb+srv://PragyaK:772492@travelitineraryaccounts.yalqnry.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     //useCreateIndex: true
+}, (err) => {
+    if(err) {
+        console.log(err)
+    } else {
+        console.log("Successfully connected to database")
+    }
 })
+
+/* const username = "PragyaK";
+const password = "772492";
+const cluster = "Loyol/Travel_Itinerary_Accounts";
+const dbname = "travelitineraryaccounts";
+
+mongoose.connect(
+  `mongodb+srv://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`, 
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }
+); */
+
+
+
+/* const formData = (bodyData) => {
+    userModel ({data: bodyData}).save((err) => {
+        if (err) {
+            throw err;
+        }
+    
+    })
+} */
+
+
 app.use(bodyParser.json())
 app.use('/', express.static(path.join(__dirname, 'HTML')))
 app.use(express.static('HTML'))
@@ -42,12 +94,33 @@ app.use(express.static('CSS'))
 app.post('/api/login', async (req, res) => {
     res.json({ status: 'ok' })
 })
+
+/*
+app.post("/add_user", async (request, response) => {
+    const user = new userModel(request.body);
+
+    console.log("req.body" + request.body)
+  
+    try {
+      await user.save();
+      response.send(user);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+}); */
+
+
 app.post('/api/signup', async (req, res) => {
-    console.log(req.body)
+    //console.log(req.body)
+    //formData(req.body);
+    
     const { fullName, emailAddress, username, password: plainTextPassword, confirmPassword } = req.body
 
+    console.log("plain text password: " + plainTextPassword);
+    console.log("confirm password: " + confirmPassword);
+
     // validates full name
-    if (!fullName || typeof fullName != 'string') {
+    if (!fullName || typeof fullName !== 'string') {
         return res.json( {status: 'error', error: 'Invalid name'})
     }
 
@@ -77,27 +150,49 @@ app.post('/api/signup', async (req, res) => {
         return res.json( { status: 'error', error: 'Passwords do not match.'})
     }
 
-    const password = await bcrypt.hash(password, 10)
+    
+    const encryptedPassword = await bcrypt.hash(plainTextPassword, 10)
+    console.log("encryptedPasswor: " + encryptedPassword);
 
+
+    const user = new userModel(req.body);
     try {
-        const response = await User.create({
+        /*
+        const response = await userModel.create({
             fullName,
             emailAddress,
             username,
-            password
-        })
-        console.log("User created successfully: ", response)
+            plainTextPassword
+        }) */
+        await user.save();
+        console.log("User saved successfully: ", res)
+        console.log("response: " + res)
     } catch(error) {
         // duplicate key
         if (error.code === 11000) {
             return res.json( {status: 'error', error: 'Username or email address already in use' })
         }
+        console.log("error: " + error)
         throw error
         
     }
+    
+    /*
+    const user = new userModel(req.body);
+
+    try {
+        await user.save();
+        //res.send(user);
+      } catch (error) {
+        res.status(500).send(error);
+      } */
+
+
     //console.log(await bcrypt.hash(password, 10))
     res.json({status: "ok"})
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({
     password: {type: String, required: true},
     confirmPassword: {type: String, required: true}
 },
-{ collection: 'users'} 
+{ collection: 'User_Accounts'} 
 )
 
 const model = mongoose.model('UserSchema', userSchema)

@@ -23,8 +23,6 @@ const server = http.createServer(function (req, res) {
     }
   })
 
-
-
   const userSchema = mongoose.Schema({
       fullName: {type: String, required: true, unique: false},
       emailAddress: {type: String, required: true, unique: true},
@@ -39,7 +37,6 @@ const server = http.createServer(function (req, res) {
   
   module.exports = userModel
 
-  //mongodb://localhost:27017/travelitineraryaccounts
 
 mongoose.connect('mongodb+srv://PragyaK:772492@travelitineraryaccounts.yalqnry.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -53,30 +50,6 @@ mongoose.connect('mongodb+srv://PragyaK:772492@travelitineraryaccounts.yalqnry.m
     }
 })
 
-/* const username = "PragyaK";
-const password = "772492";
-const cluster = "Loyol/Travel_Itinerary_Accounts";
-const dbname = "travelitineraryaccounts";
-
-mongoose.connect(
-  `mongodb+srv://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`, 
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  }
-); */
-
-
-
-/* const formData = (bodyData) => {
-    userModel ({data: bodyData}).save((err) => {
-        if (err) {
-            throw err;
-        }
-    
-    })
-} */
 
 
 app.use(bodyParser.json())
@@ -87,27 +60,11 @@ app.use('/', express.static(path.join(__dirname, 'CSS')))
 app.use(express.static('CSS'))
 //app.use('/', express.static('CSS'))
 
-/* app.get('/hello', (req, res) => {
-  res.send('Hi!')
-}) */
 
 app.post('/api/login', async (req, res) => {
     res.json({ status: 'ok' })
 })
 
-/*
-app.post("/add_user", async (request, response) => {
-    const user = new userModel(request.body);
-
-    console.log("req.body" + request.body)
-  
-    try {
-      await user.save();
-      response.send(user);
-    } catch (error) {
-      response.status(500).send(error);
-    }
-}); */
 
 
 app.post('/api/signup', async (req, res) => {
@@ -152,7 +109,7 @@ app.post('/api/signup', async (req, res) => {
 
     
     const encryptedPassword = await bcrypt.hash(plainTextPassword, 10)
-    console.log("encryptedPasswor: " + encryptedPassword);
+    console.log("encryptedPassword: " + encryptedPassword);
 
 
     const user = new userModel(req.body);
@@ -177,15 +134,6 @@ app.post('/api/signup', async (req, res) => {
         
     }
     
-    /*
-    const user = new userModel(req.body);
-
-    try {
-        await user.save();
-        //res.send(user);
-      } catch (error) {
-        res.status(500).send(error);
-      } */
 
 
     //console.log(await bcrypt.hash(password, 10))

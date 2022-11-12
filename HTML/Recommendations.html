@@ -2,21 +2,90 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../CSS/Recommendations-Stylesheet.css" type="text/css" />
-    <title>Recommendations</title>
-</head>
+const googleAPIkey = 
+const placeType = 
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/Recommendations-Stylesheet.css">
+    <title>Activity Recommendations</title>
+</head>
 <body>
-<script src="./server.js"></script>
+    
+
+    <button class="food">Food</button>
+    <button class="shopping">Shopping</button>
+    <button class="tourist-attractions">Tourist Attractions</button>
+    
+    
     <div class="container" id="container">
-        <div>IMAGE BANNER</div>
-        <div>SEARCH BAR</div>
-        <div>REC IMG 1</div>
-        <div>REC IMG 2</div>
-        <div>REC IMG 3</div>
+        <div class="overlay-container">
+            <h1>Sign Up</h1>
+            <h2>Get started in seconds! Plan your next trip with our website.</h2>
+        </div>    
+
+        <div class="form-container sign-up-container">
+            <form action="" id="sign-up-form" method="POST" enctype="multipart/form-data">
+                <input type="full-name" autocomplete="off" class="full-name" placeholder="Full Name" id="full-name">
+                <span class='user-icon' id="one"></span>
+                <input type="email-address" class="email-address" placeholder="Email Address" id="email-address">
+                <span class='email-address-icon'></span>
+                <input type="username" class="username" placeholder="Username" id="username">
+                <span class='user-icon' id="two"></span>
+                <input type="password" class="password" placeholder="Password" id="password">
+                <span class='password-icon' id="three"></span>
+                <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
+                <span class='password-icon' id="four"></span>
+                <input type="submit" class="sign-up-btn2" id="signup"></button>
+                <p class="or">OR</p>
+                <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
+                <span class='facebook-icon'></span>
+                <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
+                <span class='google-icon'></span>
+            </form>
+
+            
+        </div>    
     </div>
 </body>
+
+<script>
+    const form = document.getElementById('sign-up-form')
+    alert("form: " + form);
+    form.addEventListener("submit", registerUser)
+
+    
+
+    async function registerUser(event) {
+        event.preventDefault()
+        const fullName = document.getElementById('full-name').value
+        const emailAddress = document.getElementById('email-address').value
+        const username = document.getElementById('username').value
+        const password = document.getElementById('password').value
+        const confirmPassword = document.getElementById('confirm-password').value
+
+        const result = await fetch('/api/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }, 
+            body: JSON.stringify({
+                fullName,
+                emailAddress,
+                username,
+                password,
+                confirmPassword
+            })
+        }).then((res) => res.json())
+
+        if(result.status === 'ok') {
+            alert('Success')
+        } else {
+            alert(result.error)
+        }
+
+    }
+</script>
 
 </html>

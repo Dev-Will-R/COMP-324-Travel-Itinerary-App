@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b8452e11c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>TRAVEL</h1>
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Itinarary</a></li>
+                <li><a href="#">Book Mark</a></li>
+                <li><a href="#">Preferences</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <div class="header__wrapper">
+        <div class="cols__contain">
+            <div class="left__col">
+                <img src="./img6.jpg" alt="image" class="img"/>
+                <h2 class="user-name">Name</h2>
+            <div class="img__container">
+   
+                  
+                         <button onchange="previewFile()" class="btn">
+                            <i class="fa-solid fa-camera"></i>
+                            <label  for="imageUpload">Upload</label>
+                        </button>
+                    <input type='file'  name="fileToUpload" id="imageUpload" accept=".png, .jpg, .jpeg" onchange="previewFile()"/>
+                    <!-- <label for="imageUpload"></label> -->
+                
+                <!-- <i class="fa-solid fa-plus"></i>
+                <h2 class="user-name">Name</h2> -->
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div class="right__col">
+       <nav>
+            <ul>
+                <li><a href="#">Recent Activity</a></li>
+                <li><a href="#">Preferences</a></li>
+               
+            </ul>
+        </nav>
+    </div> -->
+    <div class="activity__section">
+          <h3 class="activity__header">Recent Activity</h3>
+          <div class="activity__img--container">
+            <img src="./img12.jpg" class="activity__img" />
+            <img src="./img13.jpg"  class="activity__img" />
+          </div>  
+    </div>
+    <div class="Preferences">
+        <div class="preferences__header">
+            <h3 class="activity__header">My Preferences</h3>
+            <div>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="activity__img--container">
+          <img src="./img12.jpg" class="activity__img" />
+          <img src="./img13.jpg"  class="activity__img" />
+          <img src="./img12.jpg" class="activity__img" />
+        </div>  
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

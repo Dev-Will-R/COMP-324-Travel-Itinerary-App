@@ -100,7 +100,7 @@ body{
 } */
 
 .header__wrapper{
-    background: url(travel-world.jpg) no-repeat;
+    background: url(../Images-Fonts/travel-world.jpg) no-repeat;
     background-size: cover;
     background-position:center;
 }

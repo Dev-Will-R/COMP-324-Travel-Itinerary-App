@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
@@ -27,15 +28,15 @@
         </div>
 
         <div class="form-container log-in-container">
-            <form action="" id = "login-form">
+            <form action="/api/login" id="login-form" method="POST" enctype="multipart/form-data">
                 
-                <input type="username" class="username" placeholder="Username" />
-                <input type="password" class="password" placeholder="Password" />
+                <input type="username" class="username" placeholder="Username" id="username"/>
+                <input type="password" class="password" placeholder="Password" id="password"/>
                 <br>
                 <p class="remember">Remember me? <input type="checkbox" name="remember" value="Remember"></p>
                 <p class="forgotten-password">Forgot your Username and/or<br> Password? <a href="#" style="color: white"><u>Click Here.</u></a></p>
 
-                <button class="login-button2">Login</button>
+                <button class="login-button2" type="submit" value="Submit Form">Login</button>
             </form>
         </div>
 
@@ -52,11 +53,8 @@
 
     async function login(event) {
         event.preventDefault()
-        const fullName = document.getElementById('full-name').value
-        const emailAddress = document.getElementById('email-address').value
         const username = document.getElementById('username').value
         const password = document.getElementById('password').value
-        const confirmPassword = document.getElementById('confirm-password').value
 
         const result = await fetch('/api/login', {
             method: 'POST',

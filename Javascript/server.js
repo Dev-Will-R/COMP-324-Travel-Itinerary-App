@@ -10,6 +10,8 @@ const bcrypt = require('bcryptjs')
 const http = require('http')
 const url = require('url')
 const fs = require("fs")
+const jwt = require('jsonwebtoken')
+const JWT_SECRET = 'epiurfgiwfbjw!@#^&&*%%dsfiuwqopqsm'
 
 
 const server = http.createServer(function (req, res) {
@@ -62,7 +64,30 @@ app.use(express.static('CSS'))
 
 
 app.post('/api/login', async (req, res) => {
-    res.json({ status: 'ok' })
+    const { username, password } = req.body
+    const user = await userModel.findOne({ username }).lean()
+
+    if(!user) {
+        return res.json({ status: "error", error: "Invalid username/password" })
+    }
+
+    if(bcrypt.compare(password, user.password)) {
+        // the username password combo is successfull
+        
+        const token = jwt.sign(
+            { 
+                id: user._id, 
+                username: user.username
+            }, 
+            JWT_SECRET 
+        )
+
+        return res.json({ status: "ok", data: token })
+    }
+
+    
+
+    res.json({ status: "error", data: "Invalid username/password" })
 })
 
 

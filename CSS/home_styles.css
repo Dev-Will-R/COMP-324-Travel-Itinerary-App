@@ -60,7 +60,7 @@ height: 55px;
 left: 1700px;
 top: 12px;
 
-background: url(img6.jpg);
+background: url(../Images-fonts/img6.jpg);
 border: 2px solid #DA5263;
 }
 
@@ -71,7 +71,7 @@ border: 2px solid #DA5263;
 
 .search__wrapper {
     
-    background: url(travel-world.jpg) no-repeat;
+    background: url(../Images-fonts/travel-world.jpg) no-repeat;
     background-size: cover;
     background-position:center;
     position:static;

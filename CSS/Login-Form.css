@@ -21,16 +21,10 @@ input {
     flex-direction: column;
 }
 
-.full-name {
-    font-size: 30px;
-    font-family: ABeeZee;
-    border-bottom: 2px solid white;
-}
-
-.email-address {
-    font-size: 30px;
-    font-family: ABeeZee;
-    border-bottom: 2px solid white;
+input.larger {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 }
 
 .username {
@@ -46,24 +40,19 @@ input {
     border-bottom: 2px solid white;
 }
 
-.confirm-password {
-    font-size: 30px;
-    font-family: ABeeZee;
-    border-bottom: 2px solid white;
-}
-
 .form-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: #DA5263;
+    background: #744578;
     border-radius: 30px;
     width:fit-content ;
     margin: auto;
     bottom: 30rem;
 
 }
+
 
 form {
     display: flex;
@@ -80,7 +69,16 @@ form {
     margin: 2.5em;
 }
 
-.login-btn1 {
+h1{
+    font-family: ABeeZee;
+    margin: 30px;
+    text-align: center;
+    z-index: 2;
+    font-size: 5.5rem;
+    color: white;
+}
+
+.login-button1 {
     font-family: ABeeZee;
     justify-content: flex-end;
     top: 1em;
@@ -97,7 +95,7 @@ form {
     margin-right: 10px;
 }
 
-.sign-up-btn1 {
+.sign-up-button {
     font-family: ABeeZee;
     justify-content: flex-end;
     top: 1em;
@@ -114,35 +112,7 @@ form {
     margin-left: 10px;
 }
 
-h1 {
-    font-family: ABeeZee;
-    margin: 30px;
-    text-align: center;
-    z-index: 2;
-    font-size: 5.5rem;
-    color: white;
-}
-
-h2 {
-    font-family: ABeeZee;
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-    text-align: center;
-    z-index: 2;
-    color: white;
-}
-
-::placeholder {
-    color: white;
-    opacity: 1;
-}
-
-
-
-.sign-up-btn2 {
-    border: 2px solid;
+.login-button2 {
     font-family: ABeeZee;
     justify-content: center;
     border-radius: 30px;
@@ -156,41 +126,21 @@ h2 {
 	text-transform: uppercase;
 }
 
-.or {
-    font-size: 24px;
+p {
     font-family: ABeeZee;
-}
-
-.sign-up-btn-facebook {
-    background-color: #1D54A6;
-    color: #FFFFFF;
-    border-radius: 13px;
-    width: 281px;
-    height: 49px;
-    font-family: ABeeZee;
-    font-size: 20px;
-}
-
-.sign-up-btn-google {
-    background-color: #B41111;
-    color: #FFFFFF;
-    border-radius: 13px;
-    width: 281px;
-    height: 49px;
-    font-family: ABeeZee;
-    font-size: 20px;
+    font-size: 35px;
+    font-weight: 100;
+    color:#FFFFFF;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .user-icon {
     background: url('../Images-Fonts/User_fill.png');
-    height: 39px;
-    width: 46px;
-    display:inline-block ;
-    margin-right: 10px;
-}
-
-.email-address-icon {
-    background: url('../Images-Fonts/Message_alt_fill.png');
     height: 39px;
     width: 46px;
     display:inline-block ;
@@ -204,46 +154,3 @@ h2 {
     display:inline-block ;
     margin-right: 10px;
 }
-
-.facebook-icon {
-    background: url('../Images-Fonts/bxl-facebook-circle\ 1.png');
-    height: 27px;
-    width: 27px;
-    display: block;
-    position: relative;
-}
-
-.google-icon {
-    background: url('../Images-Fonts/bxl-google-plus-circle\ 1.png');
-    height: 33px;
-    width: 33px;
-    display: block;
-
-} 
-
-/* #one {
-    position: relative;
-    left: 150px;
-    top: -25px;
-}
-
-#two {
-    position: relative;
-    left: 150px;
-    top: -55px;
-}
-
-#three {
-    position: relative;
-    left: 150px;
-    top: -65px;
-}
-
-#four {
-    position: relative;
-    left: 150px;
-    top: -70px;
-} */
-
-
-

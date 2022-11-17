@@ -11,7 +11,7 @@ const http = require('http')
 const url = require('url')
 const fs = require("fs")
 const jwt = require('jsonwebtoken')
-const JWT_SECRET = 'epiurfgiwfbjw!@#^&&*%%dsfiuwqopqsm'
+const JWT_SECRET = 'epiurfgiwfbjwdsfiuwqopqsm'
 
 
 const server = http.createServer(function (req, res) {
@@ -68,12 +68,12 @@ app.post('/api/login', async (req, res) => {
     const user = await userModel.findOne({ username }).lean()
 
     if(!user) {
-        return res.json({ status: "error", error: "Invalid username/password" })
+        return res.json({ status: 'error', error: 'Invalid username/password1' })
     }
 
-    if(bcrypt.compare(password, user.password)) {
+    if(await bcrypt.compare(password, user.password)) {
         // the username password combo is successfull
-        
+        alert("pp")
         const token = jwt.sign(
             { 
                 id: user._id, 
@@ -82,12 +82,11 @@ app.post('/api/login', async (req, res) => {
             JWT_SECRET 
         )
 
-        return res.json({ status: "ok", data: token })
+        return res.json({ status: 'ok', data: token })
     }
-
     
 
-    res.json({ status: "error", data: "Invalid username/password" })
+    res.json({ status: 'error', error: 'Invalid username/password2' })
 })
 
 

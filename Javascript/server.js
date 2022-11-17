@@ -61,6 +61,7 @@ app.use(express.static('HTML'))
 app.use('/', express.static(path.join(__dirname, 'CSS')))
 app.use(express.static('CSS'))
 //app.use('/', express.static('CSS'))
+app.use(express.static("./"));
 
 
 app.post('/api/login', async (req, res) => {

@@ -17,23 +17,20 @@
 <body>
 
     <div class="container" id="container">
-        
         <button class="login-button1" onclick="window.location.href='Login-Form.html';">Login</button>
         <button class="sign-up-button" onclick="window.location.href='SignUpForm.html';">Sign Up</button>
-
     </div>
         
-    <!-- <div class="title">
-                <h1>Welcome Back!</h1>
-    </div> -->
-    <!-- <div class="form-container"> -->
+
     <div class="form">
         <div class="form-container">
         <form action="/api/login" id="login-form" method="POST" enctype="multipart/form-data">
             <h1>Welcome <br> Back!</h1>
             <div>
+            <span class='user-icon' id="one"></span>
             <input type="username" class="username" placeholder="Username" id="username"/>
             <br>
+            <span class='password-icon' id="two"></span>
             <input type="password" class="password" placeholder="Password" id="password"/>
             <br>
             <p class="remember">Remember me? <input type="checkbox" class="larger" name="remember" value="Remember"></p>

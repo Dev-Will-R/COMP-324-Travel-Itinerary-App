@@ -16,38 +16,38 @@
 </head>
 
 <body>
-    
-
-    <button class="login-btn">Login</button>
-    <button class="sign-up-btn1">Sign Up</button>
 
     <div class="container" id="container">
-        <div class="overlay-container">
-            <h1>Sign Up</h1>
-            <h2>Get started in seconds! Plan your next trip with our website.</h2>
-        </div>    
+        <button class="login-btn1">Login</button>
+        <button class="sign-up-btn1">Sign Up</button>
+    </div>
 
-        <div class="form-container sign-up-container">
+    <div class="form">
+        <div class="form-container">
             <form action="/api/signup" id="sign-up-form" method="POST" enctype="multipart/form-data">
-                <input type="full-name" autocomplete="off" class="full-name" placeholder="Full Name" id="full-name">
-                <span class='user-icon' id="one"></span>
-                <input type="email-address" class="email-address" placeholder="Email Address" id="email-address">
-                <span class='email-address-icon'></span>
-                <input type="username" class="username" placeholder="Username" id="username">
-                <span class='user-icon' id="two"></span>
-                <input type="password" class="password" placeholder="Password" id="password">
-                <span class='password-icon' id="three"></span>
-                <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
-                <span class='password-icon' id="four"></span>
-                <input type="submit" class="sign-up-btn2" id="signup"></button>
-                <p class="or">OR</p>
-                <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
-                <span class='facebook-icon'></span>
-                <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
-                <span class='google-icon'></span>
-            </form>
+                <h1>Sign Up</h1>
+                <h2>Get started in seconds! Plan your next trip with our website.</h2>   
 
-            
+                <div>
+                    <span class='user-icon' id="one"></span>
+                    <input type="full-name" autocomplete="off" class="full-name" placeholder="Full Name" id="full-name">
+                    <span class='email-address-icon'></span>
+                    <input type="email-address" class="email-address" placeholder="Email Address" id="email-address">
+                    <span class='user-icon' id="two"></span>
+                    <input type="username" class="username" placeholder="Username" id="username">
+                    <span class='password-icon' id="three"></span>
+                    <input type="password" class="password" placeholder="Password" id="password">
+                    <span class='password-icon' id="four"></span>
+                    <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
+                    <input type="submit" class="sign-up-btn2" id="signup"></button>
+                    <p class="or">OR</p>
+                    <span class='facebook-icon'></span>
+                    <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
+                    <span class='google-icon'></span>
+                    <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
+                </div>
+
+            </form>
         </div>    
     </div>
 </body>

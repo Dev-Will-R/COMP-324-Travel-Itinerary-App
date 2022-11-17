@@ -50,7 +50,6 @@ input.larger {
     width:fit-content ;
     margin: auto;
     bottom: 30rem;
-
 }
 
 
@@ -145,6 +144,7 @@ p {
     width: 46px;
     display:inline-block ;
     margin-right: 10px;
+    /* position:absolute; */
 }
 
 .password-icon {
@@ -153,4 +153,5 @@ p {
     width: 46px;
     display:inline-block ;
     margin-right: 10px;
+    /* position:absolute; */
 }

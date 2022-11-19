@@ -1,54 +1,83 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../CSS/Recommendations-Stylesheet.css" type="text/css" />
-    <title>More Information</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Google Maps</title>
-        <style>
-            #map{
-                height: 405px;
-                width: 876px;
-            }
-        </style>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Directory</title>
+	<link rel="stylesheet" type="text/css" href="/css/info.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkWZoqmot4KRuIsGlZshMlJ1PV52fOYhk&libraries=places&callback=initMap"
+		async defer></script>
 </head>
 
 <body>
-    <script src="./server.js"></script>
-    <div class="container" id="container">
-        <div>IMAGE CAROUSSEL</div>
-        <div>LOCATION DESCRIPTION
-            src img=Images-Fonts\Grand-Canyon-National-Park.jpg
-        </div>
-        <div>
-            <h1>My Google Map</h1>
-            <div id="map"></div>
-            <script>
-                function initMap() {
-                    var options = {
-                        zoom:11,
-                        center: {lat: 41.8781, lng: 87.6298}
-                    }
-    
-                    var map = new google.maps.Map(document.getElementById('map'), options);
-                }
-            </script>
-            <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBsMq43Rsu_XbI4bepexzypZsQH2KlQTs&libraries=places&callback=initMap">
-        </script>
-    
-        </div>
-        <div>BUTTONS
-            <button class="">view all</button>
-            <button class="">view recs</button>
-            <button class="">add</button>
-            <button class="">save</button>
-        </div>
-    </div>
+	<div class="containers">
+		<div class="picContainer">
+			<div id="info"></div>
+			<div id="image1" class="img">
+				<img src="/assets/images/Refund_back.png" alt="" id="back"
+					style="width: 74px; height: 68px; position: absolute" />
+				<button class="btn_img">View all</button>
+				<img src="/assets/images/tim-hart-MMEryLDqkXY-unsplash 1.png" alt="" />
+			</div>
+
+			<div class="left" onclick="left()"></div>
+			<div class="right" onclick="right()"></div>
+			<div class="dots">
+				<div class="dot a1"></div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: -35px">
+			<div class="col-md-6">
+				<h1 class="h1_fonts d-flex" style="margin-bottom: -60px">
+					<div id="name">Grand Canyon</div>
+					<div class="row" style="margin-left: 20px; margin-top: 16px">
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<div id="rating"></div>
+						<button class="btn_set" type="button">View Reviews</button>
+					</div>
+				</h1>
+
+				<h1 class="h1_fonts" style="margin-bottom: -10px">
+					<i class="fa fa-map-marker"></i> Location
+				</h1>
+				<span id="location" style="
+					font-size: 22px;
+					padding: 18px;
+					color: rgba(0, 0, 0, 0.45);
+					margin-bottom: -30px;
+					">
+					Arizona, USA
+				</span>
+				<h1 class="h1_fonts" style="margin-bottom: -10px; margin-top: -7px">
+					<i class="fa fa-file-text-o" aria-hidden="true"></i> Description
+				</h1>
+				<p id="description">
+				</p>
+			</div>
+
+			<div class="col-md-6">
+				<div id="map"></div>
+				<div style="text-align: center; margin-top: 20px">
+					<button class="btn_sets" type="button">
+						<i class="fa fa-map" style="margin-left: 10px"></i> Add
+					</button>
+					<button class="btn_sets" type="button">
+						<i class="fa fa-bookmark" style="margin-left: 10px"></i> Save
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/info.js"></script>
 </body>
 
 </html>

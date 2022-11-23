@@ -14,9 +14,9 @@ const countries = {
 }
 
 const images = [
-    '/assets/images/lasagrada 1.png',
-    '/assets/images/casabatllo 1.png',
-    '/assets/images/lasagrada 1.png'
+    '../Images-Fonts/lasagrada 1.png',
+    '../Images-Fonts/casabatllo 1.png',
+    '../Images-Fonts/lasagrada 1.png'
 ]
 
 function onPlaceChanged() {
@@ -64,7 +64,7 @@ function addResult(result, i) {
     // cardATag.setAttribute('href', '/pages/index-detail.html')
     cardATag.onclick = function () {
         localStorage.setItem('index', i);
-        location.href = '/pages/more-info.html';
+        location.href = '/HTML/More-Info.html';
     }
 
     cardATag.style.textDecoration = 'none'

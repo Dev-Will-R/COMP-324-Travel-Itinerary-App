@@ -46,9 +46,11 @@ body {
     max-width: 100%;
     left: 0px;
     background: #1D54A6;
+    position: ;
     right: 0;
     left: 0;
     text-align: center;
+    margin-top: -29px;
 }
 
 .row {
@@ -384,4 +386,69 @@ h2 {
     margin-top: 40px;
     width: 100%;
     min-height: 350px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .search input{
+        width: 400px;
+       
+    }
+    .search .fa-search{
+        display: none;
+    }
+    input{
+    left: 100px;
+    }
+}    
+
+@media only screen and (max-width: 768px) {
+ .show_data{
+    margin-left: -24px;
+ }
+ .card{
+    left: -10px;
+    margin-bottom: 30px;
+ }
+ .col-md-6{
+    width: 100%;
+ }
+ .h1_font{
+    font-size: 18px;
+ }
+ .btn_set{
+    
+    margin-left: -137px;
+    margin-top: 55px;
+
+ }
+ .fa-star{
+    font-size: 18px !important;
+    margin-top: 10px;
+ }
+ .inline_css{
+    display: inline;
+ }
+ #rating{
+
+    font-size: 18px !important;  
+ }
+ .margin_left_0{
+    margin-left: 20px !important;
+ }
+ .mob_only{
+    display: block;
+ }
+ .desktop_only{
+    display: none;
+ }
+ .search input{
+    width: 274px;
+    margin-left: -25px;
+ }
+ input{
+    left: 90px;
+ }
+ .inline_css{
+    display: inline;
+ }
 }

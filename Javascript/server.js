@@ -91,6 +91,88 @@ app.post('/api/login', async (req, res) => {
 })
 
 
+const userBookmarkSchema = mongoose.Schema({
+    imageURL: {type: String, required: true, unique: false},
+    title: {type: String, required: true},
+},
+{ collection: 'User_Bookmarks'} 
+)
+
+
+const bookmarkModel = mongoose.model('UserBookmark', userBookmarkSchema)
+  
+module.exports = bookmarkModel
+
+app.post('/api/bookmarks', async (req, res) => {
+    const { imageURL, title} = req.body
+
+    console.log("imageURL: ", imageURL)
+    console.log("title: ", title)
+
+    if (!imageURL || !title || typeof title !== 'string' || typeof imageURL !== 'string') {
+        return res.json( { status: 'error', error: 'Invalid or empty data'})
+    }
+
+    const bookmark = new bookmarkModel(req.body);
+    try {
+        await bookmark.save();
+        console.log("Bookmark saved successfully: ", res)
+        console.log("response: " + res)
+    } catch(error) {
+        if (error.code === 11000) {
+            return res.json( {status: 'error', error: 'Activity is already saved in bookmarks' })
+        }
+        console.log("error: " + error)
+        throw error
+        
+    }
+    
+    res.json({status: "ok"})
+
+})
+
+
+
+const userItinerarySchema = mongoose.Schema({
+    imageURL: {type: String, required: true, unique: true},
+    title: {type: String, required: true, unique: false},
+    location: {type: String, required: true, unique: false},
+    time: {type: String, required: true, unique: false},
+    date: {type: String, required: true, unique: false},
+},
+{ collection: 'User_Itineraries'} 
+)
+
+
+const itineraryModel = mongoose.model('UserItinerary', userItinerarySchema)
+  
+module.exports = itineraryModel
+
+app.post('/api/itineraries', async (req, res) => {
+    const { imageURL, title, location, time, date } = req.body
+
+    if (!imageURL || !title || !time || !date || typeof time !== 'string' || typeof date !== 'string' || typeof title !== 'string' || typeof imageURL !== 'string' || typeof location !== 'string') {
+        return res.json( { status: 'error', error: 'Invalid or empty data'})
+    }
+
+    const itinerary = new itineraryModel(req.body);
+    try {
+        await itinerary.save();
+        console.log("Itinerary created successfully: ", res)
+        console.log("response: " + res)
+    } catch(error) {
+        if (error.code === 11000) {
+            return res.json( {status: 'error', error: 'Activity already added to itinerary' })
+        }
+        console.log("error: " + error)
+        throw error
+    }
+    res.json({status: "ok"})
+
+})
+
+
+
 
 app.post('/api/signup', async (req, res) => {
     //console.log(req.body)

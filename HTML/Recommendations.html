@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Directory</title>
-	<link rel="stylesheet" type="text/css" href="../CSS/recommendations.css" />
+	<link rel="stylesheet" href="../CSS/recommendations.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 	<script
@@ -14,8 +14,9 @@
 </head>
 
 <body>
+	<form action = '/api/bookmarks' id="recommendations-form">
 	<div class="container">
-		<img src="../Images-Fonts/barcelona 1.png" class="img-fluid img-margins" alt="" />
+		<img src="/assets/images/barcelona 1.png" class="img-fluid img-margins" alt="" />
 
 		<div class="blue-box">
 			<div class="search">
@@ -25,13 +26,14 @@
 		</div>
 		<h1 class="h1_font">RECOMMENDATIONS FOR YOU</h1>
 
-		<div class="row inline_css" id="result" style="margin-top: -35px;">
+		<div class="row" id="result" style="margin-top: -35px;">
 		</div>
 
 		<div id="map"></div>
 
 	</div>
 	<script src="../Javascript/recommendations.js"></script>
+	</form>	
 </body>
 
 </html>

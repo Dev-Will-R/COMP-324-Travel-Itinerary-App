@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ABeeZee;
+    src: url("../Images-Fonts/ABeeZee-Regular.ttf");
+}
+
 #map {
     height: 100%;
 }
@@ -46,7 +51,6 @@ body {
     max-width: 100%;
     left: 0px;
     background: #1D54A6;
-    position: ;
     right: 0;
     left: 0;
     text-align: center;
@@ -180,8 +184,13 @@ p {
 
 .card__img {
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: cover;
+}
+
+.bookmark-btn {
+    width: 40;
+    height: 40;
 }
 
 .card__body {

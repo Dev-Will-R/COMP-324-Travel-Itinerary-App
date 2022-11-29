@@ -1,0 +1,121 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-family: 
+}
+
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: calc(100px + 15vw);
+    background-color:rgb(255, 255, 255);
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: black; */
+}
+
+.navbar h1{
+    /* background-color: #ffffff; */
+    background-image: linear-gradient(to top, #A067A5 0%, #E8358B 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    padding: 5px 12px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.menu ul li a:hover{
+    border-bottom: 4px solid #000;
+    transition: .5s;
+}
+
+.logo{
+    margin-left: 20px;
+}
+
+.upcoming-trips{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1D54A6;
+}
+
+.current-trips{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #CE80D4;
+}
+
+.past-trips{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #744578;
+}
+
+.activity__img{
+    background-position: center;
+    background-size: cover;
+    width: 20%;
+    margin: 20px;
+    border-radius: 10px;
+ }
+
+.activity__img--container{
+    display: flex;
+}
+
+.fa-pencil{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.activity__header {
+    margin: 0px 20px;
+}
+
+h2 {
+    margin: 20px;
+    color: gray;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-size: 1.5em ;
+    color: #ffffff;
+}

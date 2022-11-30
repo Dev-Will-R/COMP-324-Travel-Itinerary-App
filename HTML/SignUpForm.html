@@ -24,27 +24,41 @@
 
     <div class="form">
         <div class="form-container">
+
+            <div class="heading">
             <form action="/api/signup" id="sign-up-form" method="POST" enctype="multipart/form-data">
-                <h1>Sign Up</h1>
-                <h2>Get started in seconds! Plan your next trip with our website.</h2>   
+                <h1>Sign Up </h1>
+                <h2>Get started in seconds! <br>Plan your next trip<br> with our website.</h2>
+            </div>
 
                 <div>
                     <span class='user-icon' id="one"></span>
                     <input type="full-name" autocomplete="off" class="full-name" placeholder="Full Name" id="full-name">
+                    <br>
                     <span class='email-address-icon'></span>
                     <input type="email-address" class="email-address" placeholder="Email Address" id="email-address">
+                    <br>
                     <span class='user-icon' id="two"></span>
                     <input type="username" class="username" placeholder="Username" id="username">
+                    <br>
                     <span class='password-icon' id="three"></span>
                     <input type="password" class="password" placeholder="Password" id="password">
+                    <br>
                     <span class='password-icon' id="four"></span>
                     <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
-                    <input type="submit" class="sign-up-btn2" id="signup"></button>
+                    <br>
+                    <button class="sign-up-btn2" type="submit" value="Submit Form" id="signup">Submit</button>
+
                     <p class="or">OR</p>
+                    
+                    <div class="other-options">
                     <span class='facebook-icon'></span>
                     <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
+                    <br>
                     <span class='google-icon'></span>
                     <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
+                </div>
+                
                 </div>
 
             </form>

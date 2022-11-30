@@ -1,91 +1,39 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-const googleAPIkey = 
-const placeType = 
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../CSS/Recommendations-Stylesheet.css">
-    <title>Activity Recommendations</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Directory</title>
+	<link rel="stylesheet" href="../CSS/recommendations.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkWZoqmot4KRuIsGlZshMlJ1PV52fOYhk&libraries=places&callback=initMap"
+		async defer></script>
 </head>
+
 <body>
-    
+	<form action = '/api/bookmarks' id="recommendations-form">
+	<div class="container">
+		<img src="../Images-Fonts/barcelona 1.png" class="img-fluid img-margins" alt="" />
 
-    <button class="food">Food</button>
-    <button class="shopping">Shopping</button>
-    <button class="tourist-attractions">Tourist Attractions</button>
-    
-    
-    <div class="container" id="container">
-        <div class="overlay-container">
-            <h1>Sign Up</h1>
-            <h2>Get started in seconds! Plan your next trip with our website.</h2>
-        </div>    
+		<div class="blue-box">
+			<div class="search">
+				<input placeholder="Enter City Name" type="text" id="searchTextField" />
+				<!-- <span class="fa fa-search"></span> -->
+			</div>
+		</div>
+		<h1 class="h1_font">RECOMMENDATIONS FOR YOU</h1>
 
-        <div class="form-container sign-up-container">
-            <form action="" id="sign-up-form" method="POST" enctype="multipart/form-data">
-                <input type="full-name" autocomplete="off" class="full-name" placeholder="Full Name" id="full-name">
-                <span class='user-icon' id="one"></span>
-                <input type="email-address" class="email-address" placeholder="Email Address" id="email-address">
-                <span class='email-address-icon'></span>
-                <input type="username" class="username" placeholder="Username" id="username">
-                <span class='user-icon' id="two"></span>
-                <input type="password" class="password" placeholder="Password" id="password">
-                <span class='password-icon' id="three"></span>
-                <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
-                <span class='password-icon' id="four"></span>
-                <input type="submit" class="sign-up-btn2" id="signup"></button>
-                <p class="or">OR</p>
-                <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
-                <span class='facebook-icon'></span>
-                <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
-                <span class='google-icon'></span>
-            </form>
+		<div class="row" id="result" style="margin-top: -35px;">
+		</div>
 
-            
-        </div>    
-    </div>
+		<div id="map"></div>
+
+	</div>
+	<script src="../Javascript/recommendations.js"></script>
+	</form>	
 </body>
-
-<script>
-    const form = document.getElementById('sign-up-form')
-    alert("form: " + form);
-    form.addEventListener("submit", registerUser)
-
-    
-
-    async function registerUser(event) {
-        event.preventDefault()
-        const fullName = document.getElementById('full-name').value
-        const emailAddress = document.getElementById('email-address').value
-        const username = document.getElementById('username').value
-        const password = document.getElementById('password').value
-        const confirmPassword = document.getElementById('confirm-password').value
-
-        const result = await fetch('/api/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            }, 
-            body: JSON.stringify({
-                fullName,
-                emailAddress,
-                username,
-                password,
-                confirmPassword
-            })
-        }).then((res) => res.json())
-
-        if(result.status === 'ok') {
-            alert('Success')
-        } else {
-            alert(result.error)
-        }
-
-    }
-</script>
 
 </html>

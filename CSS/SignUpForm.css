@@ -17,19 +17,25 @@ body{
 input {
     border: none;
     background: none;
-    height: 1.5em;
+    /* height: 1.5em; */
     flex-direction: column;
+    margin-inline-end:20px;
+
 }
 
 .full-name {
     font-size: 30px;
     font-family: ABeeZee;
+    margin-bottom: 20px;
+    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
 .email-address {
     font-size: 30px;
     font-family: ABeeZee;
+    /* margin-bottom: 20px; */
+    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
@@ -37,18 +43,23 @@ input {
     font-size: 30px;
     font-family: ABeeZee;
     margin-bottom: 20px;
+    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
 .password {
     font-size: 30px;
     font-family: ABeeZee;
+    margin-bottom: 20px;
+    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
 .confirm-password {
     font-size: 30px;
     font-family: ABeeZee;
+    margin-bottom: 20px;
+    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
@@ -62,16 +73,47 @@ input {
     width:fit-content ;
     margin: auto;
     bottom: 30rem;
-
 }
 
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 	align-items: center;
 	padding: 50px 50px;
 	text-align: left;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: ABeeZee;
+    margin: 30px;
+    text-align: center;
+    z-index: 2;
+    font-size: 5.5rem;
+    color: white;
+}
+
+h2 {
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: ABeeZee;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    flex-wrap: wrap;
 }
 
 .container{
@@ -114,26 +156,6 @@ form {
     margin-left: 10px;
 }
 
-h1 {
-    font-family: ABeeZee;
-    margin: 30px;
-    text-align: center;
-    z-index: 2;
-    font-size: 5.5rem;
-    color: white;
-}
-
-h2 {
-    font-family: ABeeZee;
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-    text-align: center;
-    z-index: 2;
-    color: white;
-}
-
 ::placeholder {
     color: white;
     opacity: 1;
@@ -142,6 +164,9 @@ h2 {
 
 
 .sign-up-btn2 {
+    vertical-align: bottom;
+    align-items:center ;
+    text-align:center ;
     border: 2px solid;
     font-family: ABeeZee;
     justify-content: center;
@@ -150,100 +175,105 @@ h2 {
     background-color: transparent ;
 	color: #FFFFFF;
 	font-size: 30px;
-	width: 11em;
-    height: 2.5em;
+	width: 12.75em;
+    height: 2em;
+    margin-top:20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
 .or {
+    display:flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     font-family: ABeeZee;
+    color: #FFFFFF;
 }
 
+/* .other-options{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
 .sign-up-btn-facebook {
+    /* display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
     background-color: #1D54A6;
     color: #FFFFFF;
     border-radius: 13px;
-    width: 281px;
-    height: 49px;
+    width: 19em;
+    height: 2.5em;
     font-family: ABeeZee;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .sign-up-btn-google {
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
     background-color: #B41111;
     color: #FFFFFF;
     border-radius: 13px;
-    width: 281px;
-    height: 49px;
+    width: 19em;
+    height: 2.5em;
     font-family: ABeeZee;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .user-icon {
     background: url('../Images-Fonts/User_fill.png');
-    height: 39px;
-    width: 46px;
+    height: 35px;
+    width: 37px;
     display:inline-block ;
     margin-right: 10px;
+    margin-top: 20px;
+    /* position: absolute; */
 }
 
 .email-address-icon {
     background: url('../Images-Fonts/Message_alt_fill.png');
     height: 39px;
-    width: 46px;
+    width: 40px;
     display:inline-block ;
-    margin-right: 10px;
+    margin-right: 5px;
+    /* position: absolute; */
 }
 
 .password-icon {
     background: url('../Images-Fonts/Lock_fill.png');
     height: 39px;
-    width: 46px;
+    width: 40px;
     display:inline-block ;
     margin-right: 10px;
+    /* position: absolute; */
 }
 
 .facebook-icon {
     background: url('../Images-Fonts/bxl-facebook-circle\ 1.png');
     height: 27px;
     width: 27px;
-    display: block;
-    position: relative;
+    display: inline-block;
+     /* display:inline; */
+    position: absolute;
+    vertical-align:bottom ;
 }
 
 .google-icon {
     background: url('../Images-Fonts/bxl-google-plus-circle\ 1.png');
     height: 33px;
     width: 33px;
-    display: block;
+    /* display: inline-block; */
+    position: absolute;
+    vertical-align: middle;
 
 } 
-
-/* #one {
-    position: relative;
-    left: 150px;
-    top: -25px;
-}
-
-#two {
-    position: relative;
-    left: 150px;
-    top: -55px;
-}
-
-#three {
-    position: relative;
-    left: 150px;
-    top: -65px;
-}
-
-#four {
-    position: relative;
-    left: 150px;
-    top: -70px;
-} */
 
 
 

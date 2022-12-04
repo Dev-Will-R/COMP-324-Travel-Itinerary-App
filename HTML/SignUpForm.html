@@ -12,14 +12,14 @@
     <meta http-equiv="pragma" content="no-cache" />
     <link type="text/css" href="./SignUpForm.css"> -->
     <link rel="stylesheet" type="text/css" href="../CSS/SignUpForm.css">
-    <title>Sign Up Form</title>
+    <title>Sign Up</title>
 </head>
 
 <body>
 
     <div class="container" id="container">
-        <button class="login-btn1">Login</button>
-        <button class="sign-up-btn1">Sign Up</button>
+        <button class="login-btn1" onclick="window.location.href='Login-Form.html';">Login</button>
+        <button class="sign-up-btn1" onclick="window.location.href='SignupForm.html';">Sign Up</button>
     </div>
 
     <div class="form">
@@ -47,17 +47,7 @@
                     <span class='password-icon' id="four"></span>
                     <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
                     <br>
-                    <button class="sign-up-btn2" type="submit" value="Submit Form" id="signup">Submit</button>
-
-                    <p class="or">OR</p>
-                    
-                    <div class="other-options">
-                    <span class='facebook-icon'></span>
-                    <a href='https://www.facebook.com/'><button class="sign-up-btn-facebook">Sign Up with Facebook</button></a>
-                    <br>
-                    <span class='google-icon'></span>
-                    <a href='https://www.facebook.com/'><button class="sign-up-btn-google">Sign Up with Google</button></a>
-                </div>
+                    <button class="sign-up-btn2" type="submit" value="Submit Form" id="signup" onclick="window.location.href='Recommendations.html';">Submit</button>
                 
                 </div>
 
@@ -68,7 +58,6 @@
 
 <script>
     const form = document.getElementById('sign-up-form')
-    alert("form: " + form);
     form.addEventListener("submit", registerUser)
 
     
@@ -95,11 +84,11 @@
             })
         }).then((res) => res.json())
 
-        if(result.status === 'ok') {
-            alert('Success')
-        } else {
-            alert(result.error)
-        }
+        // if(result.status === 'ok') {
+        //     alert('Success')
+        // } else {
+        //     alert(result.error)
+        // }
 
     }
 </script>

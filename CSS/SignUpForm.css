@@ -17,22 +17,20 @@ body{
 input {
     border: none;
     background: none;
-    /* height: 1.5em; */
     flex-direction: column;
     margin-inline-end:20px;
 
 }
 
 .full-name {
-    font-size: 30px;
+    font-size: 1em;
     font-family: ABeeZee;
     margin-bottom: 20px;
-    /* margin-left: 50px; */
     border-bottom: 2px solid white;
 }
 
 .email-address {
-    font-size: 30px;
+    font-size: 1em;
     font-family: ABeeZee;
     /* margin-bottom: 20px; */
     /* margin-left: 50px; */
@@ -40,7 +38,7 @@ input {
 }
 
 .username {
-    font-size: 30px;
+    font-size: 1em;
     font-family: ABeeZee;
     margin-bottom: 20px;
     /* margin-left: 50px; */
@@ -48,7 +46,7 @@ input {
 }
 
 .password {
-    font-size: 30px;
+    font-size: 1em;
     font-family: ABeeZee;
     margin-bottom: 20px;
     /* margin-left: 50px; */
@@ -56,7 +54,7 @@ input {
 }
 
 .confirm-password {
-    font-size: 30px;
+    font-size: 1em;
     font-family: ABeeZee;
     margin-bottom: 20px;
     /* margin-left: 50px; */
@@ -70,7 +68,8 @@ input {
     justify-content: center;
     background: #DA5263;
     border-radius: 30px;
-    width:fit-content ;
+    width: 42em ;
+    height:25em;
     margin: auto;
     bottom: 30rem;
 }
@@ -94,10 +93,9 @@ h1 {
     justify-content: flex-end;
     flex-direction: column;
     font-family: ABeeZee;
-    margin: 30px;
     text-align: center;
     z-index: 2;
-    font-size: 5.5rem;
+    font-size: 2.5rem;
     color: white;
 }
 
@@ -106,10 +104,9 @@ h2 {
     justify-content: flex-end;
     flex-direction: column;
     font-family: ABeeZee;
-    margin: 30px;
     display: flex;
     justify-content: center;
-    font-size: 26px;
+    font-size: 1.5em;
     text-align: center;
     z-index: 2;
     color: white;
@@ -131,7 +128,7 @@ h2 {
     border-radius: 40px;
 	background-color:#744578;
 	color: #FFFFFF;
-	font-size: 30px;
+	font-size: 1em;
 	width: 7em;
     height: 2.5em;
 	letter-spacing: 1px;
@@ -148,7 +145,7 @@ h2 {
     border-radius: 40px;
 	background-color: #DA5263;
 	color: #FFFFFF;
-	font-size: 30px;
+	font-size: 1em;
     width: 7em;
     height: 2.5em;
     letter-spacing: 1px;
@@ -174,10 +171,11 @@ h2 {
     border-color: #FFFFFF;
     background-color: transparent ;
 	color: #FFFFFF;
-	font-size: 30px;
-	width: 12.75em;
-    height: 2em;
-    margin-top:20px;
+	font-size: 1em;
+	width: 15.5em;
+    height: 2.5em;
+    margin-bottom: 1em;
+    /* margin-top:20px; */
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -189,42 +187,6 @@ h2 {
     font-size: 24px;
     font-family: ABeeZee;
     color: #FFFFFF;
-}
-
-/* .other-options{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
-.sign-up-btn-facebook {
-    /* display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    background-color: #1D54A6;
-    color: #FFFFFF;
-    border-radius: 13px;
-    width: 19em;
-    height: 2.5em;
-    font-family: ABeeZee;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.sign-up-btn-google {
-    /* display:flex;
-    align-items: center;
-    justify-content: center; */
-    background-color: #B41111;
-    color: #FFFFFF;
-    border-radius: 13px;
-    width: 19em;
-    height: 2.5em;
-    font-family: ABeeZee;
-    font-size: 20px;
-    margin-bottom: 20px;
 }
 
 .user-icon {
@@ -254,26 +216,6 @@ h2 {
     margin-right: 10px;
     /* position: absolute; */
 }
-
-.facebook-icon {
-    background: url('../Images-Fonts/bxl-facebook-circle\ 1.png');
-    height: 27px;
-    width: 27px;
-    display: inline-block;
-     /* display:inline; */
-    position: absolute;
-    vertical-align:bottom ;
-}
-
-.google-icon {
-    background: url('../Images-Fonts/bxl-google-plus-circle\ 1.png');
-    height: 33px;
-    width: 33px;
-    /* display: inline-block; */
-    position: absolute;
-    vertical-align: middle;
-
-} 
 
 
 

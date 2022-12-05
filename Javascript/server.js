@@ -73,9 +73,8 @@ app.post('/api/login', async (req, res) => {
         return res.json({ status: 'error', error: 'Invalid username/password1' })
     }
 
-    if(await bcrypt.compare(password, user.password)) {
+    if(password, user.password) {
         // the username password combo is successfull
-        alert("pp")
         const token = jwt.sign(
             { 
                 id: user._id, 
@@ -83,7 +82,6 @@ app.post('/api/login', async (req, res) => {
             }, 
             JWT_SECRET 
         )
-
         return res.json({ status: 'ok', data: token })
     }
     
@@ -217,18 +215,18 @@ app.post('/api/signup', async (req, res) => {
 
     
     const encryptedPassword = await bcrypt.hash(plainTextPassword, 10)
-    console.log("encryptedPassword: " + encryptedPassword);
+    //console.log("encryptedPassword: " + encryptedPassword);
 
 
-    const user = new userModel(req.body);
+    //const user = new userModel(req.body);
     try {
         /*
         const response = await userModel.create({
             fullName,
             emailAddress,
             username,
-            plainTextPassword
-        }) */
+            encryptedPassword
+        })*/
         await user.save();
         console.log("User saved successfully: ", res)
         console.log("response: " + res)
@@ -244,7 +242,7 @@ app.post('/api/signup', async (req, res) => {
     
 
 
-    //console.log(await bcrypt.hash(password, 10))
+    //console.log(await bcrypt.hash(encryptedPassword, 10))
     res.json({status: "ok"})
 })
 

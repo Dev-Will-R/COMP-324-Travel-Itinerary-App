@@ -1,64 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Travel Itinarary home page</title>
     <link rel="stylesheet" href="../CSS/home_styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/b8452e11c5.js" crossorigin="anonymous"></script>
-    <!-- <script src="../Javascript/home_script.js"></script>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrZezY5SmoCl3zPv1pf34KKO0D0Ig9SbA&libraries=places&callback=initAutocomplete" async defer>
-    </script> -->
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkWZoqmot4KRuIsGlZshMlJ1PV52fOYhk&libraries=places&callback=initMap"
+		async defer></script>
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <h1>Home</h1> 
+  <div class="navbar">
+    <div class="logo">
+        <h1>TRAVEL</h1>
 
-        </div>
-     
-        <div class="menu" id="nav-list">
-            <ul>
-                <li><a href="/HTML/home_page.html"><u>Home</u></a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Itinarary</a></li>
-                <li><a href="#">Book Mark</a></li>
-                <li><a href="#">Preferences</a></li>
-            </ul>
-            
-        </div>
-        <div class="header__wrapper">
-            <div class="cols__contain">
-                <!-- <div class="left__col">
-                    <img src="../Images-fonts/img6.jpg" alt="image" class="img"/>
-                    <h2 class="user-name">Name</h2>
-               
-                </div> -->
-
-            </div>
-        </div>
-
-        <div class="hamburger" id="hamburger">
-            <span class="line-1 line"></span>
-            <span class="line-2 line"></span>
-            <span class="line-3 line"></span>
-          </div>
-       
     </div>
+    <div class="menu">
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Itineraries</a></li>
+            <li><a href="#">Bookmarks</a></li>
+        </ul>
+    </div>
+    <div class="left__col">
+      <img src="../Images-Fonts/img6.jpg" alt="image" class="img"/>
+    </div>  
+  </div>
+
     <div class="search__wrapper">
         <h1>Hello, Name</h1>
         <p>Plan your next trip! Never waste a second at your destination.</p>
-        <div class="search__bar">
-            <!-- <label for="search" class="search__label">Search</label> -->
-            <input class="search__input" type="text" id="autocomplete" placeholder="Where do you want to go?" data-search>
 
-        </div>
+            <input type="text" id="searchTextField" placeholder="Where do you want to go.?" class="search__input" data-search>
         
     </div>
-    <br>
-    <div class="cities">
+
+    <div class="cities" id="cities">
         <h2 class="trending_title">Trending Cities</h2>
             <br>
         
@@ -80,93 +62,77 @@
             <p class="trending__name">Chicago, USA</p>
             </a>
         </div>
-     </div>     
-     <br>
-     <div class="attraction_section">
-        <h2 class="trending_attraction__title">Trending Attractions</h2>
-            <br>
-        
-        <div class="trending__header">
-            <a href="" class="trending__link">
-            <img src="../Images-fonts/img 11.jpg" alt="img" class="trending_attraction__img" />
-            <p class="trending_attracion__name">Cusco, Peru</p>
-            </a>
-            <a href=""  class="trending__link">
-            <img src="../Images-fonts/img 11.jpg" alt="img" class="trending_attraction__img" />
-            <p class="trending_attracion__name">New York, USA</p>
-            </a>
-            <a href=""  class="trending__link">
-            <img src="../Images-fonts/img 11.jpg" alt="img" class="trending_attraction__img" />
-            <p class="trending_attracion__name">Venice, Italy</p>
-            </a>
-            <a href=""  class="trending__link">
-            <img src="../Images-fonts/img 11.jpg" alt="img" class="trending_attraction__img" />
-            <p class="trending_attracion__name">Chicago, USA</p>
-            </a>
-        </div>
-     </div>   
+     </div>    
 
+
+     <h2 class="title_rec" id="title_rec"></h2>
+
+     <div class="row" id="result">
+    </div>
+
+    <div id="map"></div>
+
+    <footer>
+        <section class="ft-main">
+          <div class="ft-main-item">
+            <h2 class="ft-title">About</h2>
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Customers</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <h2 class="ft-title">Resources</h2>
+            <ul>
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">eBooks</a></li>
+              <li><a href="#">Webinars</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <h2 class="ft-title">Contact</h2>
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Advertise</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <h2 class="ft-title">Stay Updated</h2>
+            <p>Subscribe to our newsletter to get our latest news.</p>
+            <form>
+              <input type="email" name="email" placeholder="Enter email address">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </section>
       
-   <footer>
-    <section class="ft-main">
-      <div class="ft-main-item">
-        <h2 class="ft-title">About</h2>
-        <ul>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Customers</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-      <div class="ft-main-item">
-        <h2 class="ft-title">Resources</h2>
-        <ul>
-          <li><a href="#">Docs</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">eBooks</a></li>
-          <li><a href="#">Webinars</a></li>
-        </ul>
-      </div>
-      <div class="ft-main-item">
-        <h2 class="ft-title">Contact</h2>
-        <ul>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Sales</a></li>
-          <li><a href="#">Advertise</a></li>
-        </ul>
-      </div>
-      <div class="ft-main-item">
-        <h2 class="ft-title">Stay Updated</h2>
-        <p>Subscribe to our newsletter to get our latest news.</p>
-        <form>
-          <input type="email" name="email" placeholder="Enter email address">
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
-    </section>
-  
-    <section class="ft-social">
-      <ul class="ft-social-list">
-        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-github"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-    </section>
-  
-    <section class="ft-legal">
-      <ul class="ft-legal-list">
-        <li><a href="#">Terms &amp; Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li>&copy; Copyright 2022. All rights reserverd.</li>
-      </ul>
-    </section>
-  </footer>
+        <section class="ft-social">
+          <ul class="ft-social-list">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-github"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </section>
+      
+        <section class="ft-legal">
+          <ul class="ft-legal-list">
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li>&copy; Copyright 2022. All rights reserverd.</li>
+          </ul>
+        </section>
+      </footer>
 
-  <script src="../Javascript/home_script.js"></script>
 
+    <script src="../Javascript/home_script.js"></script>
 </body>
+
 </html>

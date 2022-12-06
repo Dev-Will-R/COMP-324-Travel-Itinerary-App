@@ -47,7 +47,7 @@
                     <span class='password-icon' id="four"></span>
                     <input type="password" class="confirm-password" placeholder="Confirm Password" id="confirm-password">
                     <br>
-                    <button class="sign-up-btn2" type="submit" value="Submit Form" id="signup" onclick="window.location.href='home_page.html';">Submit</button>
+                    <button class="sign-up-btn2" type="submit" value="Submit Form" id="signup" onclick=registerUser(event)>Submit</button>
                 
                 </div>
 
@@ -84,11 +84,12 @@
             })
         }).then((res) => res.json())
 
-        // if(result.status === 'ok') {
-        //     alert('Success')
-        // } else {
-        //     alert(result.error)
-        // }
+        if(result.status === 'ok') {
+            alert('Success')
+            window.location = "home_page.html"
+        } else {
+            alert(result.error)
+        }
 
     }
 </script>

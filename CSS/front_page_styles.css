@@ -31,8 +31,8 @@
 }
 
 img {
-    width: 500px;
-    height: 170px;
+    width: 600px;
+    height: 210px;
 }
 
 .heading{
@@ -95,7 +95,7 @@ img {
 	text-transform: uppercase;
 }
 
-.footer{
+footer{
     display: flex;
     direction: column;
     background-color: rgb(11, 93, 187);

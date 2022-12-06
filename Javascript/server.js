@@ -66,6 +66,7 @@ app.use(express.static("./"));
 
 
 app.post('/api/login', async (req, res) => {
+    console.log("req body: " + req.body)
     const { username, password } = req.body
     // Find the user's username and password
     const user = await userModel.findOne({ username, password }).lean()

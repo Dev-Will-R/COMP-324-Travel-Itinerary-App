@@ -77,7 +77,7 @@ app.post('/api/login', async (req, res) => {
 
     // Compare the entered password and the database password to see if they're the same
     if(password == user.password) {
-        // The password is correct and 
+        // The password is correct and signs the user in
         const token = jwt.sign(
             { 
                 id: user._id, 
@@ -85,10 +85,11 @@ app.post('/api/login', async (req, res) => {
             }, 
             JWT_SECRET 
         )
+        // Returns the ok success status and the token from the above jwt.sign in the console
         return res.json({ status: 'ok', data: token })
     }
     
-
+    // If passwords do not match, throws an error
     res.json({ status: 'error', error: 'Invalid username/password!' })
 })
 

@@ -3,8 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'ABeeZee';
+}
 
+@font-face {
+  font-family: ABeeZee;
+  src: url("../Images-Fonts/ABeeZee-Regular.ttf");
 }
 
 html{
@@ -26,7 +30,9 @@ html{
    } 
 
 .logo{
-    margin-left: 20px;
+    margin-left: 15px;
+    width:auto;
+    height: 60px;
 }
 
 .navbar h1{
@@ -64,12 +70,6 @@ html{
 .menu ul li a:hover{
     border-bottom: 4px solid #000;
     transition: .5s;
-}
-
-.img{
-    width: 20%;
-    border-radius: 50%;
-    border: 3px solid #da5263;
 }
 
 .img:hover{
@@ -230,7 +230,7 @@ footer > a:hover {
 
   .ft-title {
     color: #fff;
-    font-family: "Merriweather", serif;
+    font-family: 'ABeeZee';
     font-size: 1.375rem;
     padding-bottom: 0.625rem;
   }
@@ -320,7 +320,7 @@ input[type="submit"] {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         justify-items: center;
-        margin-left: 50px;
+        /* margin-left: 50px; */
         gap: 50px;
     }
     .img {

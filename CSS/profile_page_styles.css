@@ -104,8 +104,8 @@ body {
     background-position: .25px;   /*fix*/
     position: relative;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width:auto;
+    height: 450px
 }
 
 .header__wrapper{

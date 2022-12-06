@@ -12,52 +12,58 @@ html{
 }
 
 .navbar {
-    width: 100%;
-    height: 80px;
-    background-color: #000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2;
 }
 
 .hamburger{  
     display:none;   
    } 
 
+.logo{
+    margin-left: 20px;
+}
+
 .navbar h1{
-    background-color: tomato;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-color: #A067A5;
+    background-image: linear-gradient(to top, #A067A5 0%, #E8358B 100%);
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     display:flex;
     align-items: center;
+    justify-content: center;
     cursor:pointer;
     text-decoration: none;
     font-size: 2rem;
-    left: 300px;
 }
 
 .menu ul{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
 }
 
 .menu ul li a{
-    text-decoration: none;
-    color:#fff;
-    padding: 5px 12px;
-    letter-spacing: 2px;
-    font-size: 18px;
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+  padding: 5px 12px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  align-items: center;
 }
 
 .menu ul li a:hover{
     border-bottom: 4px solid #000;
-    transition: 1.8s;
+    transition: .5s;
 }
 
 .img{
@@ -73,12 +79,12 @@ html{
 
 .search__wrapper {
     
-    background: url(../Images-fonts/travel-world.jpg) no-repeat;
+    background: url(../Images-Fonts/niketh-vellanki-7FyzRTZYufY-unsplash.jpg) no-repeat;
     background-size: cover;
     background-position:center;
     position:static;
     width:auto;
-    height: 400px;
+    height: 450px;
     left: 0px;
     top: 80px;
     text-align: center;
@@ -158,7 +164,8 @@ input {
 
 .trending_title {
     margin-left: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
+    color: #A067A5
 }
 
 .trending__name{

@@ -66,15 +66,19 @@ app.use(express.static("./"));
 
 
 app.post('/api/login', async (req, res) => {
+    console.log("req body: " + req.body)
     const { username, password } = req.body
+    // Find the user's username and password
     const user = await userModel.findOne({ username, password }).lean()
 
+    // Check if the user does not exist by username, throw an error if username does not exist
     if(!user) {
-        return res.json({ status: 'error', error: 'Invalid username/password1' })
+        return res.json({ status: 'error', error: 'Invalid username/password!' })
     }
 
+    // Compare the entered password and the database password to see if they're the same
     if(password == user.password) {
-        // the username password combo is successfull
+        // The password is correct and signs the user in
         const token = jwt.sign(
             { 
                 id: user._id, 
@@ -82,11 +86,12 @@ app.post('/api/login', async (req, res) => {
             }, 
             JWT_SECRET 
         )
+        // Returns the ok success status and the token from the above jwt.sign in the console
         return res.json({ status: 'ok', data: token })
     }
     
-
-    res.json({ status: 'error', error: 'Invalid username/password2' })
+    // If passwords do not match, throws an error
+    res.json({ status: 'error', error: 'Invalid username/password!' })
 })
 
 

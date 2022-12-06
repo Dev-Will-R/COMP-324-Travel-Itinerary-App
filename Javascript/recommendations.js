@@ -70,9 +70,9 @@ async function addBookmark(event) {
     event.preventDefault()
     const cardImageElem = document.getElementById('cardImageTag')
     alert("cardImageElem: " + cardImageElem)
-    const imageURL = document.getElementById('cardImageTag').src
+    const imageURL = await document.getElementById('cardImageTag').src
     alert("imageURL: ", imageURL)
-    const title = document.getElementById('title-tag').value
+    const title = await document.getElementById('title-tag').value
     alert("title: ", title)
     const result = await fetch('/api/bookmarks', {
         method: 'POST',

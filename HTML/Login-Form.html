@@ -74,70 +74,8 @@
         } else {
             alert(result.error)
         }
+
     }
-
-    // async function handleLogin() {
-
-    //     const username = document.getElementById('username').value
-    //     const password = document.getElementById('password').value
-        
-    //     await fetch('/api/login', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }, 
-    //     body: JSON.stringify(username, password)
-    // }).then().catch(error=>console.log(error)).then(res => res.json()).then(
-    //   data => {
-
-    //   if(result.status === 'ok') {
-    //         console.log('Got the token: ', result.data)
-    //         alert('Success')
-    //         window.location = "Recommendations.html"
-    //     } else {
-    //         alert(result.error)
-    //     }
-    //     }
-    // )
-    // }
-
-//     async function loginUser(credentials) {
-//   return fetch('/bookmarks', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(credentials)
-//   })
-//     .then(data => data.json())
-//  }
-
-//  function Signin() {
-//   const [username, setUserName] = useState();
-//   const [password, setPassword] = useState();
-
-//   const handleSubmit = async e => {
-//     e.preventDefault();
-//     const response = await loginUser({
-//       username,
-//       password
-//     });
-//     if (response === 'ok') {
-//       alert("Success", response.message, "success", {
-//         buttons: false,
-//         timer: 2000,
-//       })
-//       .then((value) => {
-//         localStorage.setItem('accessToken', response['accessToken']);
-//         localStorage.setItem('user', JSON.stringify(response['user']));
-//         window.location.href = "Recommendations.html";
-//       });
-//     } else {
-//       alert("Failed", response.message, "error");
-//     }
-//   }
-
-
 </script>
 
 </html>

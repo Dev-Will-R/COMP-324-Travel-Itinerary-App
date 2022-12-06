@@ -218,7 +218,7 @@ app.post('/api/signup', async (req, res) => {
     //console.log("encryptedPassword: " + encryptedPassword);
 
 
-    //const user = new userModel(req.body);
+    const user = new userModel(req.body);
     try {
         /*
         const response = await userModel.create({

@@ -33,7 +33,7 @@ function search() {
         console.log('results', results)
         localStorage.setItem('results', JSON.stringify(results))
         if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-            for (let i = 0; i < (results.length > 5 ? 5 : results.length); i++) {
+            for (let i = 0; i < (results.length > 15 ? 15 : results.length); i++) {
                 var imageUrl = getPhoto(results[i]);
                 console.log("imageUrl: " + imageUrl);
                 addResult(results[i], i, imageUrl);

@@ -76,17 +76,6 @@ body {
     margin-bottom: 20px;
 }
 
-.btn_sets {
-    width: 193px;
-    height: 42px;
-    border-radius: 13px;
-    background: #1D54A6;
-    margin-left: 34px;
-    color: white;
-    border-color: #1D54A6;
-    font-size: 18px;
-}
-
 p {
     font-weight: 400;
     font-size: 19px;
@@ -307,11 +296,6 @@ img {
     width: 50%;
 }
 
-input {
-    position: absolute;
-    top: 2rem;
-}
-
 h2 {
     position: absolute;
     color: rgba(0, 0, 0, 0.75);
@@ -503,4 +487,79 @@ h2 {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.menu-container {
+    display: flex;
+    direction: flex-end;
+}
+
+label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:center;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+
+.menu {
+    width: 340px;
+    border: 2px solid #000;
+    border-radius: .5em;
+    overFlow: hidden;
+}
+
+.menu ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    width: 70%;
+    height: 100%;
+}
+
+.menu li {
+    width: 90%;
+}
+
+.menu a {
+    width: 100%;
+    display: inline-block;
+    padding: .5em 1em;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #000;
+    transition: background-color 150ms ease-in-out
+}
+
+.menu a:hover {
+    background-color: rgb(202,202,202);
+}
+
+.menu a:active {
+    font-size: 1.3rem;
+}
+
+.add {
+    cursor: pointer;
+}
+
+.btn_sets {
+    width: 193px;
+    height: 42px;
+    border-radius: 13px;
+    background: #1D54A6;
+    margin-left: 34px;
+    color: white;
+    border-color: #1D54A6;
+    font-size: 18px;
+    transition: 300ms ease-in-out transform, 300ms ease-in-out opacity;
+}
+input:not(:checked) ~ .menu {
+    /* transform: translateY(-100%); */
+    opacity: 10;
+    display: none;
 }

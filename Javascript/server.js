@@ -67,13 +67,13 @@ app.use(express.static("./"));
 
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body
-    const user = await userModel.findOne({ username }).lean()
+    const user = await userModel.findOne({ username, password }).lean()
 
     if(!user) {
         return res.json({ status: 'error', error: 'Invalid username/password1' })
     }
 
-    if(password, user.password) {
+    if(password == user.password) {
         // the username password combo is successfull
         const token = jwt.sign(
             { 

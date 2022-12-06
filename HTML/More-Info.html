@@ -113,12 +113,32 @@
 			<div class="col-md-6">
 				<div id="map"></div>
 				<div style="text-align: center; margin-top: 20px">
-					<button class="btn_sets" type="button">
-						<i class="fa fa-map" style="margin-left: 10px"></i> Add
-					</button>
-					<button class="btn_sets" type="button">
+					<div class="menu-container">
+					<label for="menu">
+						<input type="checkbox" id="menu">
+						<div class="add"> 
+							<button class="btn_sets add_button" type="button">
+								<i class="fa fa-map" style="margin-left: 10px"></i> Add
+							</button>
+						</div>
+						<div class="menu">
+							<ul>
+								<li><a>Add to Itinerary</a></li>
+								<li><a>Create New Itinerary</a></li>
+								<li><a>Cancel</a></li>
+							</ul>
+						</div>
+						<!-- <button class="btn_sets" type="button">
+							<i class="fa fa-map" style="margin-left: 10px"></i> Add
+						</button>
+						<button class="btn_sets" type="button">
+							<i class="fa fa-bookmark" style="margin-left: 10px"></i> Save
+						</button> -->
+					</label>
+					<button class="btn_sets save-button" type="button">
 						<i class="fa fa-bookmark" style="margin-left: 10px"></i> Save
 					</button>
+				</div>
 				</div>
 			</div>
 		</div>

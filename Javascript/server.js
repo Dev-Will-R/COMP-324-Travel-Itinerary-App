@@ -188,6 +188,11 @@ app.post('/api/signup', async (req, res) => {
     console.log("confirm password: " + confirmPassword);
 
     // validates full name
+    if (!fullName || !username || !emailAddress || !plainTextPassword || !confirmPassword) {
+        return res.json( { status: 'error', error: 'All fields are required'})
+    }
+
+
     if (!fullName || typeof fullName !== 'string') {
         return res.json( {status: 'error', error: 'Invalid name'})
     }
